@@ -1,6 +1,20 @@
+aside {
+  position: absolute;
+  /* height: 100vh;
+  width: 100vw; */
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+
+  /* display: none; */
+}
+
 .logo {
   perspective: 40px;
-  height: 350px;
+  height: 355px;
 }
 .hexagon-container {
   position: relative;
@@ -81,4 +95,34 @@
   top: 100%;
   width: 0;
   border-top: 80.83px solid #FFF;
+}
+
+.letter {
+  position: absolute;
+  display: none;
+  font-family: 'Montserrat', sans-serif;
+}
+.letter-1 {
+  top: -115px;
+  left: 147px;
+}
+.letter-2 {
+  top: -10px;
+  left: 310px;
+}
+.letter-3 {
+  top: 165px;
+  left: 310px;
+}
+.letter-4 {
+  top: 265px;
+  left: 144px;
+}
+.letter-5 {
+  top: 165px;
+  left: -20px;
+}
+.letter-6 {
+  top: -10px;
+  left: -20px;
 }

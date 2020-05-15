@@ -1,0 +1,23 @@
+.hexagon-container .img-container img {
+    opacity: 1;
+    transition: all .5s ease-in-out;
+}
+.hexagon-container {
+    cursor: pointer;
+}
+.hexagon-container h3 {
+    position: absolute;
+    color: var(--header);
+    text-transform: uppercase;
+    left: 85px;
+    top: 120px;
+    cursor: pointer;
+}
+.hexagon-container .img-container:hover img {
+    opacity: 0;
+    
+    /* display: none; */
+}
+.hexagon-container .img-container:hover {
+    background-color: var(--color-7);
+}

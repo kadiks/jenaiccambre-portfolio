@@ -1,0 +1,44 @@
+section {
+    width: 50vw;
+    height: 33.3vh;
+    margin: 0;
+    padding: 0;
+    transition: all .5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--header);
+    cursor: pointer;
+}
+
+section h3 {
+    display: none;
+    text-transform: uppercase;
+    user-select: none;
+    
+}
+
+section:hover h3 {
+    display: inherit;
+}
+
+section.photography:hover {
+    background-color: var(--color-2);
+}
+section.writing:hover {
+    color: var(--body);
+    background-color: var(--color-3);
+}
+section.blog:hover {
+    background-color: var(--color-6);
+}
+section.about:hover {
+    background-color: var(--color-4);
+}
+section.teaching:hover {
+    color: var(--body);
+    background-color: var(--color-5);
+}
+section.development:hover {
+    background-color: var(--color-1);
+}

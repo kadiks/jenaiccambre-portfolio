@@ -1,6 +1,6 @@
 // Init
-var container = document.querySelector('.logo');
-var inner = document.querySelector('.hexagon-container');
+var container = document.querySelector('body.loader .logo');
+var inner = document.querySelector('body.loader .hexagon-container');
 // Mouse 
 var mouse = {
   _x: 0,
