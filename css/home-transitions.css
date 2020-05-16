@@ -1,0 +1,10 @@
+aside {
+    left: 425.2px;
+}
+.page-transition aside {
+    transition: all 1s ease-in-out;
+}
+.page-about-transition aside {
+    left: -150px;
+    transform: scale(.5);
+}

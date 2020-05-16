@@ -41,7 +41,7 @@ aside {
   position: relative;
   width: 300px; 
   height: 173.21px;
-  background-color: #64C7CC;
+  background-color: var(--color-1);
   /* background: linear-gradient(to right, rgb(18, 194, 233), rgb(196, 113, 237), rgb(246, 79, 89)); */
   /* background: -webkit-linear-gradient(#eb5757, #d59152); */
   margin: 86.60px 0;
@@ -58,13 +58,69 @@ aside {
   
 .outer-hexagon:before {
   bottom: 100%;
-  border-bottom: 86.60px solid #64C7CC;
+  border-bottom: 86.60px solid var(--color-1);
 }
 
 .outer-hexagon:after {
   top: 100%;
   width: 0;
-  border-top: 86.60px solid #64C7CC;
+  border-top: 86.60px solid var(--color-1);
+}
+
+.outer-hexagon.development {
+  background-color: var(--color-1);
+}
+.outer-hexagon.development:before,
+.outer-hexagon.development:after {
+  border-top-color: var(--color-1);
+}
+.outer-hexagon.photography {
+  background-color: var(--color-2);
+}
+.outer-hexagon.photography:before,
+.outer-hexagon.photography:after {
+  border-top-color: var(--color-2);
+  border-bottom-color: var(--color-2);
+}
+.outer-hexagon.writing {
+  background-color: var(--color-3);
+}
+.outer-hexagon.writing:before,
+.outer-hexagon.writing:after {
+  border-top-color: var(--color-3);
+  border-bottom-color: var(--color-3);
+}
+.outer-hexagon.about {
+  background-color: var(--color-4);
+}
+.outer-hexagon.about:before,
+.outer-hexagon.about:after {
+  border-top-color: var(--color-4);
+  border-bottom-color: var(--color-4);
+}
+.outer-hexagon.teaching {
+  background-color: var(--color-5);
+}
+.outer-hexagon.teaching:before,
+.outer-hexagon.teaching:after {
+  border-top-color: var(--color-5);
+  border-bottom-color: var(--color-5);
+}
+.outer-hexagon.blog {
+  background-color: var(--color-6);
+}
+.outer-hexagon.blog:before,
+.outer-hexagon.blog:after {
+  border-top-color: var(--color-6);
+  border-bottom-color: var(--color-6);
+}
+.outer-hexagon.contact {
+  background-color: var(--color-7);
+}
+.outer-hexagon.contact:before,
+.outer-hexagon.contact:after {
+  border-top-color: var(--color-7);
+  border-bottom-color: var(--color-7);
 }
 
 .hexagon {

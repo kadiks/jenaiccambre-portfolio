@@ -1,3 +1,8 @@
+.outer-hexagon,
+.outer-hexagon:after,
+.outer-hexagon:before {
+    transition: all .3s;
+}
 .hexagon-container .img-container img {
     opacity: 1;
     transition: all .5s ease-in-out;
