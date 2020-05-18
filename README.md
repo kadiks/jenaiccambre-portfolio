@@ -1,4 +1,4 @@
-# Porttfolio
+# Portfolio
 
 My first portfolio ever!
 
