@@ -2,6 +2,7 @@ body {
     margin: 0;
     /* background: linear-gradient(to right, rgb(198, 255, 221), rgb(251, 215, 134), rgb(247, 121, 125)); */
     font-family: 'Lato', sans-serif;
+    overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -15,4 +16,17 @@ main {
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+.pages {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
 }

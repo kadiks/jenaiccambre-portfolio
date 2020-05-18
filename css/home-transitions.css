@@ -1,10 +1,42 @@
-aside {
-    left: 425.2px;
-}
 .page-transition aside {
+    transform: scale(.5);
     transition: all 1s ease-in-out;
 }
+.page-development-transition aside {
+    right: -150px !important;
+    bottom: -175px !important;
+}
+.page-photography-transition aside {
+    left: -150px !important;
+    bottom: -175px !important;
+}
+.page-writing-transition aside {
+    right: -150px !important;
+}
 .page-about-transition aside {
-    left: -150px;
-    transform: scale(.5);
+    left: -150px !important;
+}
+.page-teaching-transition aside {
+    top: -150px !important;
+    right: -150px !important;
+}
+.page-blog-transition aside {
+    top: -150px !important;
+    left: -150px !important;
+}
+
+.pages article {
+    width: 50vw;
+    height: 33.3vh;
+    transition: all 1s ease-in-out; 
+}
+
+article.about {
+    background-color: var(--color-4);
+    color: var(--body);
+}
+
+.page-about-transition article.about {
+    height: 100vh;
+    width: 100vw;
 }
