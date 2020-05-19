@@ -21,22 +21,33 @@ const initHome = () => {
     });
 
     bodyEl.addEventListener('click', ({ target }) => {
-        console.log('target', target);
+        // console.log('target', target);
         if (target.matches('section') === true) {
             // console.log('target2', [...target.classList].includes('about'));
             const category = target.getAttribute('data-category');
             const positions = getCategoryPositions({ el: target });
             setHexagonPos({ el: asideEl, category });
 
-            console.log('positions', positions);
+            // console.log('positions', positions);
+
+            setCategoryPos({ category, positions });
 
             setTimeout(() => {
+                bodyEl.classList.remove('page-home');
                 bodyEl.classList.add('page-transition');
                 bodyEl.classList.add(`page-${category}-transition`);
             }, 0);
-            // alert('ok');
         }
     });
+};
+
+const setCategoryPos = ({ category, positions }) => {
+    const el = document.querySelector(`article.${category}`);
+    el.style.display = 'flex';
+    el.style.top = positions.top;
+    el.style.left = positions.left;
+    el.style.width = positions.width;
+    el.style.height = positions.height;
 };
 
 const setHexagonPos = ({ el, category }) => {

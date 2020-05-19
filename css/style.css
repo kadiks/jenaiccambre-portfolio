@@ -29,4 +29,10 @@ main {
     align-items: center;
     height: 100vh;
     width: 100vw;
+    display: none;
+}
+
+article {
+    display: none;
+    position: absolute;
 }

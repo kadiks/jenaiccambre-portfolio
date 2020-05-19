@@ -1,3 +1,6 @@
+/**
+ * HEXAGON
+ */
 .page-transition aside {
     transform: scale(.5);
     transition: all 1s ease-in-out;
@@ -25,18 +28,53 @@
     left: -150px !important;
 }
 
-.pages article {
+
+/**
+ * ARTICLES
+ */
+
+/* .pages article {
     width: 50vw;
     height: 33.3vh;
     transition: all 1s ease-in-out; 
-}
+} */
 
-article.about {
-    background-color: var(--color-4);
+article {
     color: var(--body);
 }
 
-.page-about-transition article.about {
-    height: 100vh;
-    width: 100vw;
+article.development {
+    background-color: var(--color-1);
+}
+article.photography {
+    background-color: var(--color-2);
+}
+article.writing {
+    background-color: var(--color-3);
+}
+article.about {
+    background-color: var(--color-4);
+}
+article.teaching {
+    background-color: var(--color-5);
+}
+article.blog {
+    background-color: var(--color-6);
+}
+
+
+.page-transition article {
+    transition: all 1s ease-in-out;
+}
+
+.page-development-transition article.development,
+.page-photography-transition article.photography,
+.page-writing-transition article.writing,
+.page-about-transition article.about,
+.page-teaching-transition article.teaching,
+.page-blog-transition article.blog {
+    height: 100vh !important;
+    width: 100vw !important;
+    left: 0 !important;
+    top: 0 !important;
 }
