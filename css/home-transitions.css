@@ -1,28 +1,35 @@
 /**
  * HEXAGON
  */
+ .classic-menu aside,
 .page-transition aside {
     transform: scale(.5);
     transition: all 1s ease-in-out;
 }
+.classic-menu.page-development aside,
 .page-development-transition aside {
     right: -150px !important;
     bottom: -175px !important;
 }
+.classic-menu.page-photography aside,
 .page-photography-transition aside {
     left: -150px !important;
     bottom: -175px !important;
 }
+.classic-menu.page-writing aside,
 .page-writing-transition aside {
     right: -150px !important;
 }
+.classic-menu.page-about aside,
 .page-about-transition aside {
     left: -150px !important;
 }
+.classic-menu.page-teaching aside,
 .page-teaching-transition aside {
     top: -150px !important;
     right: -150px !important;
 }
+.classic-menu.page-blog aside,
 .page-blog-transition aside {
     top: -150px !important;
     left: -150px !important;
@@ -66,7 +73,7 @@ article.blog {
 .page-transition article {
     transition: all 1s ease-in-out;
 }
-
+.classic-menu article,
 .page-development-transition article.development,
 .page-photography-transition article.photography,
 .page-writing-transition article.writing,

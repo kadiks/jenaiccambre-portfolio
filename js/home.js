@@ -36,6 +36,12 @@ const initHome = () => {
                 bodyEl.classList.remove('page-home');
                 bodyEl.classList.add('page-transition');
                 bodyEl.classList.add(`page-${category}-transition`);
+                setTimeout(() => {
+                    bodyEl.classList.remove('page-transition');
+                    bodyEl.classList.remove(`page-${category}-transition`);
+                    bodyEl.classList.add(`classic-menu`);
+                    bodyEl.classList.add(`page-${category}`);
+                }, 1000);
             }, 0);
         }
     });

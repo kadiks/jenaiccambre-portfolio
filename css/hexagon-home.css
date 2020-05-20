@@ -18,11 +18,11 @@
     top: 120px;
     cursor: pointer;
 }
-.hexagon-container .img-container:hover img {
+.page-home .hexagon-container .img-container:hover img {
     opacity: 0;
     
     /* display: none; */
 }
-.hexagon-container .img-container:hover {
+.page-home .hexagon-container .img-container:hover {
     background-color: var(--color-7);
 }
