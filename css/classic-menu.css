@@ -4,6 +4,10 @@ aside nav {
     opacity: 0;
     transition: all .5s ease-in-out;
 }
+aside .outer-hexagon {
+    box-shadow: rgba(0, 0, 0, .5) 3px 2px -2px;
+    filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, .5));
+}
 .classic-menu aside:hover nav {
     /* display: block; */
     opacity: 1;

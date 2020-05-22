@@ -67,16 +67,22 @@ aside {
   border-top: 86.60px solid var(--color-1);
 }
 
+.menu-selected-development .outer-hexagon,
 .outer-hexagon.development {
   background-color: var(--color-1);
 }
+.menu-selected-development .outer-hexagon:before,
+.menu-selected-development .outer-hexagon:after,
 .outer-hexagon.development:before,
 .outer-hexagon.development:after {
   border-top-color: var(--color-1);
 }
+.menu-selected-photography .outer-hexagon,
 .outer-hexagon.photography {
   background-color: var(--color-2);
 }
+.menu-selected-photography .outer-hexagon:before,
+.menu-selected-photography .outer-hexagon:after,
 .outer-hexagon.photography:before,
 .outer-hexagon.photography:after {
   border-top-color: var(--color-2);

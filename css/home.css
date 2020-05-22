@@ -18,10 +18,16 @@ section h3 {
     
 }
 
+.menu-selected h3,
 section:hover h3 {
     display: inherit;
 }
 
+.menu-selected-development section.development,
+section.development:hover {
+    background-color: var(--color-1);
+}
+.menu-selected-photography section.photography,
 section.photography:hover {
     background-color: var(--color-2);
 }
@@ -39,9 +45,7 @@ section.teaching:hover {
     color: var(--body);
     background-color: var(--color-5);
 }
-section.development:hover {
-    background-color: var(--color-1);
-}
+
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {

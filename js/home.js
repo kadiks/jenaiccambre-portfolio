@@ -1,8 +1,14 @@
+let bodyEl = null;
 let curSection = 'development';
+let asideCenterPositions = {};
 const initHome = () => {
-    const bodyEl = document.querySelector('body.page-home');
+    bodyEl = document.querySelector('body');
     const hexaOuterEl = document.querySelector('.outer-hexagon');
     const asideEl = document.querySelector('aside');
+    const navEl = asideEl.querySelector('nav');
+
+    setAsideCenterPos({ el: asideEl });
+
     bodyEl.addEventListener('mouseover', ({ target }) => {
         if (target.matches('section') === true) {
             if (target.classList[0] !== curSection) {
@@ -11,7 +17,7 @@ const initHome = () => {
                 hexaOuterEl.classList.add(curSection);
             }
         }
-        if (target.matches('img') === true) {
+        if (target.matches('img') === true && [...bodyEl.classList].includes('page-home')) {
             if (curSection !== 'contact') {
                 hexaOuterEl.classList.remove(curSection);
                 curSection = 'contact';
@@ -45,7 +51,66 @@ const initHome = () => {
             }, 0);
         }
     });
+
+    navEl.addEventListener('click', ({ target }) => {
+        let liEl = null;
+        if (target.matches('li') === true) {
+            liEl = target;
+        }
+        if (target.matches('a') === true) {
+            liEl = target.closest('li');
+        }
+        if (target.matches('span') === true) {
+            liEl = target.closest('li');
+        }
+        const nextCategory = liEl.classList[0];
+        moveTo({
+            category: curSection,
+            isReverse: true,
+            nextCategory
+        }, 1000);
+    });
+
+    // TODO
+    window.addEventListener('resize', onResize);
+    window.addEventListener('orientationchange', onResize);
 };
+
+// TODO
+const onResize = () => {
+    // setAsidePositions(); but calculated based on its size and the window size
+}
+
+const moveTo = ({ category, isReverse = false, nextCategory = null }, delay) => {
+    if (isReverse === true ) {
+        bodyEl.classList.remove(`page-${category}-transition`);
+        bodyEl.classList.remove(`page-${category}`);
+        bodyEl.classList.add('page-home');
+    } else {
+        bodyEl.classList.add(`page-${category}-transition`);
+        bodyEl.classList.add(`page-${category}`);
+        bodyEl.classList.remove('page-home');
+    }
+    if (nextCategory !== null) {
+        setTimeout(() => {
+            console.log('moveTo callback');
+            moveTo({ category: nextCategory });
+        }, delay);
+    }
+};
+
+const setAsideCenterPos = ({ el }) => {
+    const styles = getComputedStyle(el);
+    asideCenterPositions = {
+        top: positionToNum(styles.getPropertyValue('top')),
+        left: positionToNum(styles.getPropertyValue('left')),
+        width: positionToNum(styles.getPropertyValue('width')),
+        height: positionToNum(styles.getPropertyValue('height')),
+    };
+};
+const positionToNum = (pos) => {
+    return Number(pos.replace('px', ''));
+}
 
 const setCategoryPos = ({ category, positions }) => {
     const el = document.querySelector(`article.${category}`);
